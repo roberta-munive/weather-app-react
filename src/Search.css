@@ -1,0 +1,61 @@
+/* search section of app */
+
+.Search .search-bar-input,
+.search-btn {
+  border: 1px solid #d3d6db;
+  border-radius: 6px;
+  font-size: 16px;
+  padding: 10px 15px;
+  width: 50%;
+}
+
+.Search .search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+}
+
+.Search .search-btn {
+  border: 1px solid rgb(56, 89, 139, 0.4);
+  color: #38598b;
+  margin-left: 5px;
+  transition: all 150ms ease-in-out;
+  width: 15%;
+}
+
+.search-btn:hover {
+  background-color: #38598b;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .search-bar {
+    flex-direction: column;
+    /* align-content: center; */
+    align-items: center;
+    /* justify-content: center; */
+    margin: 20px;
+  }
+
+  .Search.search-bar-input,
+  .search-btn {
+    border-radius: 0;
+  }
+
+  .Search .search-bar {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 auto;
+  }
+
+  .Search .search-bar-input {
+    border-radius: ;
+    width: 80%;
+  }
+
+  .Search .search-btn {
+    margin-top: 10px;
+    width: 40%;
+  }
+}

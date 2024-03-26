@@ -1,38 +1,32 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #1a355b;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.App hr {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App .card {
+  border: 2px solid #d3d6db;
+  border-radius: 10px;
 }
 
-.App-link {
-  color: #61dafb;
-}
+.App .weather-watch-card-body {
+  background: linear-gradient(180.3deg,
+      rgb(214, 224, 255) 37.2%,
+      rgb(254, 168, 168) 137.3%);
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 30px;
 }

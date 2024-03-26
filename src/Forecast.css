@@ -1,0 +1,58 @@
+.Forecast .forecast-conditions-icon {
+  display: block;
+  margin: 0 auto;
+  height: 88px;
+  width: 88px;
+  /* aspect-ratio: 1 / 1; */
+}
+
+.Forecast .forecast-day-of-week {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.Forecast .forecast-hr {
+  margin: 3px 0;
+}
+
+.Forecast .forecast-low-temperature {
+  opacity: 0.7;
+}
+
+.Forecast .forecast-temperatures {
+  display: flex;
+  justify-content: space-around;
+}
+
+.Forecast .multi-day-forecast {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.Forecast.single-day-forecast {
+  background-color: rgba(0, 0, 0, 0);
+  border: 2px solid rgb(56, 89, 139, 0.3);
+  box-shadow: 5px 7px 5px rgba(109, 108, 109, 0.3);
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 18px;
+  margin-bottom: 15px;
+  margin-top: 15px;
+  transition: all 150ms ease-in-out;
+}
+
+.Forecast .single-day-forecast:hover {
+  transform: scale(1.2);
+}
+
+@media (max-width: 760px) {
+  .Forecast .multi-day-forecast {
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+  }
+
+  .Forecast .single-day-forecast {
+    margin: 0 auto;
+    aspect-ratio: 1 / 1;
+  }
+}

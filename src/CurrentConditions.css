@@ -1,0 +1,62 @@
+/* current conditions section of app */
+
+.CurrentConditions .current-city {
+  font-size: 44px;
+  margin-bottom: 2px;
+}
+
+.CurrentConditions .current-conditions {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 75%;
+}
+
+.CurrentConditions .current-conditions-description {
+  font-size: 30px;
+  margin-bottom: 0;
+  margin-top: 5px;
+}
+
+.CurrentConditions .current-conditions-icon {
+  left: -15px;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.CurrentConditions .current-date-time {
+  opacity: 0.7;
+  margin-bottom: 10px;
+}
+
+.CurrentConditions .current-feels-like-temperature {
+  opacity: 0.7;
+  text-align: center;
+}
+
+.CurrentConditions .current-temperature {
+  font-size: 100px;
+}
+
+.CurrentConditions .degree-unit {
+  font-size: 28px;
+  position: relative;
+  top: -50px;
+}
+
+@media (max-width: 760px) {
+  .CurrentConditions .current-conditions {
+    align-items: center;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+    width: 100%;
+    overflow-x: auto;
+    text-align: center;
+  }
+}
