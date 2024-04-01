@@ -4,7 +4,7 @@ import Forecast from "./Forecast";
 import Footer from "./Footer";
 import "./App.css";
 
-function App() {
+export default function App() {
 
   return (
     <div className="App">
@@ -29,4 +29,4 @@ function App() {
   );
 }
 
-export default App;
+
