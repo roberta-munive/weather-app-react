@@ -8,7 +8,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <div className="app-container">
+      <div className="app-container container">
         <div className="card weather-watch-card-body">
           {/* search section */}
           <Search />
