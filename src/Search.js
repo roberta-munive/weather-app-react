@@ -1,4 +1,5 @@
 import React from "react";
+import axios from "axios";
 import "./Search.css";
 
 export default function Search() {
@@ -11,6 +12,7 @@ export default function Search() {
           className="search-bar-input"
           placeholder="Enter a city"
           required
+          
         />
         <button type="submit" className="search-btn">
           Search
