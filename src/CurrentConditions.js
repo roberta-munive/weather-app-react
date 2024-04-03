@@ -7,7 +7,7 @@ export default function CurrentConditions(props) {
     day: "Tuesday",
     date: "October 24",
     time: "6:53pm",
-    // imgUrl:
+    // iconUrl:
     //   "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png",
     // description: "Partly cloudy",
     // windSpeed: 13,
@@ -25,7 +25,7 @@ export default function CurrentConditions(props) {
           </p>
           <img
             className="current-conditions-icon"
-            src={props.weatherData.imgUrl}
+            src={props.weatherData.iconUrl}
             alt={props.weatherData.description}
           />
           <p className="current-conditions-description text-capitalize">
