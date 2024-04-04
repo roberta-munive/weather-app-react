@@ -15,7 +15,7 @@ export default function CurrentConditions(props) {
             src={props.weatherData.iconUrl}
             alt={props.weatherData.description}
           />
-          <p className="current-conditions-description text-capitalize">
+          <p className="current-conditions-description">
             {props.weatherData.description}
           </p>
           <p className="current-wind-speed">

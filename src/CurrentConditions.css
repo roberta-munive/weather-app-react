@@ -43,6 +43,10 @@
   top: -50px;
 }
 
+.CurrentConditions .current-conditions-description::first-letter {
+  text-transform: capitalize;
+}
+
 @media (max-width: 760px) {
   .CurrentConditions .current-conditions {
     align-items: center;
