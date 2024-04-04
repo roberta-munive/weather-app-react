@@ -38,9 +38,9 @@ export default function Search(props) {
       feelsLike: response.data.temperature.feels_like,
       windSpeed: response.data.wind.speed,
       description: response.data.condition.description,
-      iconUrl: response.data.condition.icon_url
+      iconUrl: response.data.condition.icon_url,
+      timeStamp: response.data.time
     });
-
   }
 
 

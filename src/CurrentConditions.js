@@ -1,28 +1,15 @@
 import React from "react";
 import "./CurrentConditions.css";
+import FormattedDateTime from "./FormattedDateTime";
 
 export default function CurrentConditions(props) {
-  let weatherData = {
-    // city: "Paris",
-    day: "Tuesday",
-    date: "October 24",
-    time: "6:53pm",
-    // iconUrl:
-    //   "http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-day.png",
-    // description: "Partly cloudy",
-    // windSpeed: 13,
-    // temperature: 19,
-    // feelsLike: 85,
-  };
 
   return (
     <div className="CurrentConditions">
       <div className="current-conditions">
         <div className="current-conditions-left-side">
           <h1 className="current-city">{props.weatherData.city}</h1>
-          <p className="current-date-time">
-            {weatherData.day}, {weatherData.date}, {weatherData.time}
-          </p>
+          <FormattedDateTime timeStamp={props.weatherData.timeStamp} />
           <img
             className="current-conditions-icon"
             src={props.weatherData.iconUrl}
