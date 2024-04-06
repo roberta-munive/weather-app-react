@@ -30,7 +30,7 @@ export default function CurrentTemperature(props) {
           °F |{" "}
           <a
             href="/"
-            className="text-decoration-none"
+            className="text-decoration-none fw-light opacity-50"
             onClick={showCelsiusTemp}>
             °C
           </a>
@@ -51,7 +51,7 @@ export default function CurrentTemperature(props) {
           °C |{" "}
           <a
             href="/"
-            className="text-decoration-none"
+            className="text-decoration-none fw-light opacity-50"
             onClick={showFahrenheitTemp}>
             °F
           </a>{" "}

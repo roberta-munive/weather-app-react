@@ -3,6 +3,7 @@ import "./CurrentConditions.css";
 import FormattedDateTime from "./FormattedDateTime";
 import WeatherIcon from "./WeatherIcon";
 import CurrentTemperature from "./CurrentTemperature";
+import WindSpeed from "./WindSpeed";
 
 export default function CurrentConditions(props) {
   return (
@@ -15,9 +16,7 @@ export default function CurrentConditions(props) {
           <p className="current-conditions-description">
             {props.weatherData.description}
           </p>
-          <p className="current-wind-speed">
-            Wind: {Math.round(props.weatherData.windSpeed)} mph
-          </p>
+          <WindSpeed currentWindSpeed={props.weatherData.windSpeed} />
         </div>
         <div className="current-conditions-right-side">
           <CurrentTemperature

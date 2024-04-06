@@ -19,21 +19,6 @@
   margin-top: 5px;
 }
 
-/* .CurrentConditions .current-feels-like-temperature {
-  opacity: 0.7;
-  text-align: center;
-}
-
-.CurrentConditions .current-temperature {
-  font-size: 100px;
-}
-
-.CurrentConditions .degree-unit {
-  font-size: 28px;
-  position: relative;
-  top: -50px;
-} */
-
 /* capitalize only the first word of the current conditions description */
 .CurrentConditions .current-conditions-description::first-letter {
   text-transform: capitalize;
