@@ -34,6 +34,7 @@ export default function Search(props) {
       windSpeed: response.data.wind.speed,
       description: response.data.condition.description,
       iconUrl: response.data.condition.icon_url,
+      iconDescription: response.data.condition.icon,
       timeStamp: response.data.time,
     });
   }
