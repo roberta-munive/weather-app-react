@@ -1,3 +1,4 @@
+/* the animated current conditions weather icon is of type canvas */
 .WeatherIcon canvas {
   margin: 20px auto;
   vertical-align: middle;

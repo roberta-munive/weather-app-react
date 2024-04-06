@@ -1,0 +1,14 @@
+.CurrentTemperature .current-feels-like-temperature {
+  opacity: 0.7;
+  text-align: center;
+}
+
+.CurrentTemperature .current-temperature {
+  font-size: 100px;
+}
+
+.CurrentTemperature .degree-unit {
+  font-size: 28px;
+  position: relative;
+  top: -50px;
+}

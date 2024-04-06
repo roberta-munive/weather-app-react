@@ -2,6 +2,7 @@ import React from "react";
 import "./CurrentConditions.css";
 import FormattedDateTime from "./FormattedDateTime";
 import WeatherIcon from "./WeatherIcon";
+import CurrentTemperature from "./CurrentTemperature";
 
 export default function CurrentConditions(props) {
   return (
@@ -19,13 +20,10 @@ export default function CurrentConditions(props) {
           </p>
         </div>
         <div className="current-conditions-right-side">
-          <span className="current-temperature">
-            {Math.round(props.weatherData.temperature)}
-          </span>
-          <span className="degree-unit">°F</span>
-          <p className="current-feels-like-temperature">
-            Feels like: {Math.round(props.weatherData.feelsLike)}°
-          </p>
+          <CurrentTemperature
+            fahrenheitCurrentTemp={props.weatherData.temperature}
+            fahrenheitFeelsLikeTemp={props.weatherData.feelsLike}
+          />
         </div>
       </div>
       <hr />
