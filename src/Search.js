@@ -63,7 +63,7 @@ export default function Search(props) {
 
         {/* forecast section */}
 
-        <Forecast />
+        <Forecast city={weatherData.city} />
       </div>
     );
   } else {

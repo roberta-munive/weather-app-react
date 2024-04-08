@@ -12,7 +12,10 @@ export default function CurrentConditions(props) {
         <div className="current-conditions-left-side">
           <h1 className="current-city">{props.weatherData.city}</h1>
           <FormattedDateTime timeStamp={props.weatherData.timeStamp} />
-          <WeatherIcon iconDescription={props.weatherData.iconDescription} />
+          <WeatherIcon
+            iconDescription={props.weatherData.iconDescription}
+            size={75}
+          />
           <p className="current-conditions-description">
             {props.weatherData.description}
           </p>

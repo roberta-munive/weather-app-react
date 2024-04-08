@@ -30,7 +30,7 @@ export default function WeatherIcon(props) {
         className="current-conditions-icon"
         icon={iconCodeMap[props.iconDescription]}
         color="#1a355b"
-        size={75}
+        size={props.size}
         animate={true}
       />
     </div>
