@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { Watch } from "react-loader-spinner";
-import WeatherIcon from "./WeatherIcon";
+import ForecastSingleDay from "./ForecastSingleDay";
 import "./Forecast.css";
 
 export default function Forecast(props) {
@@ -11,27 +11,13 @@ export default function Forecast(props) {
   function handleResponse(response) {
     setForecastData(response.data.daily);
     setHasLoaded(true);
-    console.log(response.data.daily);
-    console.log(response.data.city);
   }
 
   if (hasLoaded) {
     return (
       <div className="Forecast">
         <div className="multi-day-forecast">
-          <div className="forecast-card single-day-forecast">
-            <div className="forecast-day-of-week">Tue</div>
-            <hr className="forecast-hr" />
-            <WeatherIcon
-              className="forecast-conditions-icon"
-              iconDescription="clear-sky-day"
-              size={50}
-            />
-            <div className="forecast-temperatures mt-4 mb-3 ">
-              <div className="forecast-high-temperature">54°F</div>
-              <div className="forecast-low-temperature">47°F</div>
-            </div>
-          </div>
+          <ForecastSingleDay forecastData={forecastData} />
         </div>
         <hr />
       </div>
