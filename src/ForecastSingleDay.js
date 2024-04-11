@@ -3,21 +3,21 @@ import WeatherIcon from "./WeatherIcon";
 import "./ForecastSingleDay.css";
 
 export default function ForecastSingleDay(props) {
-  console.log(props.forecastData);
+  // console.log(props.forecastData);
 
   function maxTemperatureRounded() {
-    let maxTemp = Math.round(props.forecastData[1].temperature.maximum);
+    let maxTemp = Math.round(props.forecastData.temperature.maximum);
     return maxTemp;
   }
 
   function minTemperatureRounded() {
-    let minTemp = Math.round(props.forecastData[1].temperature.minimum);
+    let minTemp = Math.round(props.forecastData.temperature.minimum);
     return minTemp;
   }
 
   function dayOfWeekLengthThree() {
     // Need to multiply timestamp by 1000 so that the argument is in milliseconds, not seconds
-    let dateTimeStr = new Date(props.forecastData[1].time * 1000);
+    let dateTimeStr = new Date(props.forecastData.time * 1000);
 
     let dayOfWeekNumerical = dateTimeStr.getDay();
 
@@ -33,10 +33,11 @@ export default function ForecastSingleDay(props) {
     <div className="ForecastSingleDay">
       <div className="forecast-card single-day-forecast">
         <div className="forecast-day-of-week">{dayOfWeekLengthThree()}</div>
+        <div className="fst-italic text-center">{props.city}</div>
         <hr className="forecast-hr" />
         <WeatherIcon
           className="forecast-conditions-icon"
-          iconDescription={props.forecastData[1].condition.icon}
+          iconDescription={props.forecastData.condition.icon}
           size={50}
         />
         <div className="forecast-temperatures mt-4 mb-3 ">

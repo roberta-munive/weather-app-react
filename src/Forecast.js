@@ -7,17 +7,31 @@ import "./Forecast.css";
 export default function Forecast(props) {
   let [hasLoaded, setHasLoaded] = useState(false);
   let [forecastData, setForecastData] = useState(null);
+  let [city, setCity] = useState(props.city);
 
   function handleResponse(response) {
     setForecastData(response.data.daily);
     setHasLoaded(true);
+    setCity(response.data.city);
   }
+
+  let numForecastDays = 5;
 
   if (hasLoaded) {
     return (
       <div className="Forecast">
         <div className="multi-day-forecast">
-          <ForecastSingleDay forecastData={forecastData} />
+          {forecastData.map(function (dailyForecast, index) {
+            if (index < numForecastDays) {
+              return (
+                <div key={index}>
+                  <ForecastSingleDay forecastData={dailyForecast} city={city} />
+                </div>
+              );
+            } else {
+              return null;
+            }
+          })}
         </div>
         <hr />
       </div>
