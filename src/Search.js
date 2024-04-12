@@ -28,7 +28,6 @@ export default function Search(props) {
   function handleResponse(response) {
     if (!response.data.city) {
       alert(`${city} cannot be found.  Try again.`);
-      // <Search defaultCity="Paris" />;
       return;
     }
     setWeatherData({

@@ -15,6 +15,7 @@ export default function Forecast(props) {
     setCity(response.data.city);
   }
 
+  // allows forecast to update upon search for a new city
   useEffect(() => {
     setHasLoaded(false);
   }, [props.city]);
