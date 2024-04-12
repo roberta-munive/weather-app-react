@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Watch } from "react-loader-spinner";
 import ForecastSingleDay from "./ForecastSingleDay";
@@ -14,6 +14,10 @@ export default function Forecast(props) {
     setHasLoaded(true);
     setCity(response.data.city);
   }
+
+  useEffect(() => {
+    setHasLoaded(false);
+  }, [props.city]);
 
   let numForecastDays = 5;
 

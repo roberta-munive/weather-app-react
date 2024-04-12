@@ -33,7 +33,6 @@ export default function ForecastSingleDay(props) {
     <div className="ForecastSingleDay">
       <div className="forecast-card single-day-forecast">
         <div className="forecast-day-of-week">{dayOfWeekLengthThree()}</div>
-        <div className="fst-italic text-center">{props.city}</div>
         <hr className="forecast-hr" />
         <WeatherIcon
           className="forecast-conditions-icon"
