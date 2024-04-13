@@ -15,7 +15,10 @@ export default function Forecast(props) {
     setCity(response.data.city);
   }
 
-  // allows forecast to update upon search for a new city
+  // Allows forecast to update upon search for a new city
+  // When enter a new city, hasLoaded is true, so forecast API will not be called.
+  // useEffect resets hasLoaded to false when a new city is entered, thereby allowing forecast API to be called with the new city information
+
   useEffect(() => {
     setHasLoaded(false);
   }, [props.city]);
